@@ -48,12 +48,12 @@
             width: 100%;
         }
 
-#emimg , #emimg1 {
-       transition: transform 0.3s ease-in-out;
-}
-#emimg:hover , #emimg1:hover {
-        transform: scale(0.9);
-}
+        #emimg , #emimg1 {
+               transition: transform 0.3s ease-in-out;
+        }
+        #emimg:hover , #emimg1:hover {
+                transform: scale(0.9);
+        }
 
 
     
