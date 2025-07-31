@@ -1,28 +1,23 @@
-document.addEventListener('DOMContentLoaded', () => {
+
     // Mobile menu toggle
     const menuBtn = document.getElementById('menu-btn');
     const mobileMenu = document.getElementById('mobile-menu');
-
-    if (menuBtn && mobileMenu) {
-        menuBtn.addEventListener('click', () => {
-            mobileMenu.classList.toggle('hidden');
-        });
-    }
+    
+    menuBtn.addEventListener('click', () => {
+        mobileMenu.classList.toggle('hidden');
+    });
 
     // Smooth scrolling for navigation links
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function (e) {
             e.preventDefault();
-
-            const target = document.querySelector(this.getAttribute('href'));
-            if (target) {
-                target.scrollIntoView({ behavior: 'smooth' });
-            }
-
+            
+            document.querySelector(this.getAttribute('href')).scrollIntoView({
+                behavior: 'smooth'
+            });
+            
             // Close mobile menu if open
-            if (mobileMenu) {
-                mobileMenu.classList.add('hidden');
-            }
+            mobileMenu.classList.add('hidden');
         });
     });
 
@@ -32,12 +27,12 @@ document.addEventListener('DOMContentLoaded', () => {
 
     window.addEventListener('scroll', () => {
         let current = '';
-
+        
         sections.forEach(section => {
             const sectionTop = section.offsetTop;
             const sectionHeight = section.clientHeight;
-
-            if (window.scrollY >= sectionTop - 300) {
+            
+            if (pageYOffset >= (sectionTop - 300)) {
                 current = section.getAttribute('id');
             }
         });
@@ -49,16 +44,16 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
     });
-
+/*
     // Animate skill bars on scroll
     const skillBars = document.querySelectorAll('.skill-bar');
 
     function animateSkillBars() {
         skillBars.forEach(bar => {
-            const targetWidth = bar.getAttribute('data-skill') || '0%';
+            const width = bar.style.width;
             bar.style.width = '0';
             setTimeout(() => {
-                bar.style.width = targetWidth;
+                bar.style.width = width;
             }, 100);
         });
     }
@@ -71,10 +66,9 @@ document.addEventListener('DOMContentLoaded', () => {
                 observer.unobserve(entry.target);
             }
         });
-    }, { threshold: 0.3 });
+    }, {threshold: 0.3});
 
-    // Observe each parent of skill-bar
-    skillBars.forEach(bar => {
+    document.querySelectorAll('.skill-bar').forEach(bar => {
         observer.observe(bar.parentElement);
     });
-});
+    */
