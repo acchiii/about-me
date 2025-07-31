@@ -62,7 +62,7 @@ document.addEventListener('DOMContentLoaded', () => {
             }, 100);
         });
     }
-
+/*
     // Intersection Observer for skill bars
     const observer = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
@@ -78,3 +78,4 @@ document.addEventListener('DOMContentLoaded', () => {
         observer.observe(bar.parentElement);
     });
 });
+*/
