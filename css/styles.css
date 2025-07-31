@@ -48,6 +48,12 @@
             width: 100%;
         }
 
+        #cont, #download, #hire {
+            transition: transform 0.3s ease-in-out;
+        }
+         #cont:hover, #download:hover, #hire:hover {
+                transform: scale(0.9);
+         }
         #emimg , #emimg1 {
                transition: transform 0.3s ease-in-out;
         }
@@ -55,5 +61,16 @@
                 transform: scale(0.9);
         }
 
-
-    
+        .grid > div:has(h4):has(p) {
+            transition: transform 0.3s ease-in-out;
+        }
+        .grid > div:has(h4):has(p):hover {
+            transform: scale(0.9);
+        }
+        .flex > div:has(img):has(span) {
+            transition: transform 0.3s ease-in-out;
+        }
+        .flex > div:has(img):has(span):hover {
+            transform: scale(0.9);
+        }
+      
