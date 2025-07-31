@@ -54,10 +54,10 @@
          #cont:hover, #download:hover, #hire:hover {
                 transform: scale(0.9);
          }
-        #emimg , #emimg1 {
+        #emimg , #emimg1, button[type='submit'] {
                transition: transform 0.3s ease-in-out;
         }
-        #emimg:hover , #emimg1:hover {
+        #emimg:hover , #emimg1:hover, button[type='submit']:hover {
                 transform: scale(0.9);
         }
 
