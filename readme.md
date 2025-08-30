@@ -1,0 +1,1 @@
+Open terminal and run `npm run build` to compile tailwind
